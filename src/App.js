@@ -58,38 +58,25 @@ class App extends Component {
   }
 
   moveUp(snake){
-    let el = [];
-    el[0] = snake[0][0];
-    el[1] = snake [0][1];
-    snake.unshift(el);
+    snake.unshift([snake[0][0],snake[0][1]]);
     snake[0][0]--;
     return snake
   };
 
   moveDown(snake){
-    let el = [];
-
-    el[0] = snake[0][0];
-    el[1] = snake [0][1];
-    snake.unshift(el);
+    snake.unshift([ snake[0][0],snake[0][1]]);
     snake[0][0]++;
     return snake;
   };
 
   moveRight(snake){
-    let el = [];
-    el[0] = snake[0][0];
-    el[1] = snake [0][1];
-    snake.unshift(el);
-    snake[0][1]++
+    snake.unshift([snake[0][0],snake[0][1]]);
+    snake[0][1]++;
     return snake;
   };
 
   moveLeft(snake){
-    let el = [];
-    el[0] = snake[0][0];
-    el[1] = snake [0][1];
-    snake.unshift(el);
+    snake.unshift([snake[0][0],snake[0][1]]);
     snake[0][1]--;
     return snake;
   };
