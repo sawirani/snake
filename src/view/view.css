@@ -1,16 +1,19 @@
+.fieldborder{
+    border : 10px double black;
+}
 .square,.apple,.snake {
     width: 30px;
     height: 30px;
     display: inline-block;
-    border : 0;
 }
 .apple {
     background: red;
+    border-radius: 50%;
 }
 .snake {
-    background: violet;
+    background: brown;
 }
 .field2{
     height: 30px;
-    background: limegreen;
+    background-size: 30px 30px;
 }

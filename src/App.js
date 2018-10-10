@@ -94,6 +94,10 @@ class App extends Component {
     return snake;
   };
 
+  checkwin(snake) {
+    return snake.length === (this.state.width * this.state.height)
+  }
+
   move(){
     setInterval(function () {
       let snake = [...this.state.snake];
@@ -234,10 +238,16 @@ class App extends Component {
         direction = 1;
       }
 
+      if(this.checkwin(snake)){
+        alert('Поздравляем вы выграли!. Нажмите ok чтобы начать сначала');
+        snake = [[1,2]];
+        direction = 1;
+      }
+
       this.setState({
         snake,direction,apple
       });
-    }.bind(this),300);
+    }.bind(this),90);
   };
 
   componentDidMount(){
@@ -285,6 +295,7 @@ class App extends Component {
       }
     }
   };
+
 
   render() {
     return (

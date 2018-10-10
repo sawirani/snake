@@ -48,7 +48,7 @@ class GameView extends Component {
   render() {
 
     return (
-      <div>
+      <div className='fieldborder'>
         { this.renderField()}
       </div>
     )
